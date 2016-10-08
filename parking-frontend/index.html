@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>ParkingAdvisor - Parking Analytics</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-history-api/4.2.4/history.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <app-main></app-main>
+    <app-navi></app-navi>
+
+
+    <!-- riot tags -->
+    <script type="riot/tag" src="app-main.tag"></script>
+    <script type="riot/tag" src="app-navi.tag"></script>
+    <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- mount  app -->
+    <script>
+      riot.compile(function() {
+        riot.route.base('/')
+        riot.mount('*')
+        riot.route.start(true)
+      })
+    </script>
+
+    <style>
+      body { margin: 0 }
+    </style>
+  </body>
+
+</html>

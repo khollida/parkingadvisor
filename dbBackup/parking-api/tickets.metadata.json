@@ -1,0 +1,1 @@
+{ "options" : { "create" : "tickets" }, "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "ns" : "parking-api.tickets", "name" : "_id_" } ] }

@@ -41,7 +41,7 @@ router.get('/amount/:amount', function (req, res, next) {
 /* GET /parking/location/:location/total
    Gives total sum of fines per location */
 router.get('/location/:location/total', function (req, res, next) {
-        Tickets.aggregate({ $match: { location: req.params.location } }, { $group: { _id: req.params.location, totalAmount: { $sum:  "$amount" } } },
+        Tickets.aggregate({ $match: { location: req.params.location } }, { $group: { _id: req.params.location, totalAmount: { $sum:  "$amount" }, count: { $sum: 1 } } },
         function (err, citations) {
             if (err) return next(err);
             res.json(citations);

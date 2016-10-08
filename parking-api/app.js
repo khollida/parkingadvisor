@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 // Require and Declare Routes
 var routes = require('./routes/index');
@@ -39,6 +40,9 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+// Cors 
+app.use(cors());
 
 // error handlers
 
